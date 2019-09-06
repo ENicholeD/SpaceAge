@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('.form').submit(function(event){
     event.preventDefault();
     let age = parseInt($('#earthAge').val());
-    let newUser = new UserAge(age);
+    let newUser = new userAge(age);
     let mercuryConvert = newUser.mercCalc();
     $("#merc").text(mercuryConvert);
   });
