@@ -1,4 +1,4 @@
-export class UserAge{
+export class Age{
   constructor(earth, gender, mercury, venus, mars, jupiter){
     this.earth = earth;
     this.gender = gender;
@@ -9,30 +9,30 @@ export class UserAge{
     this.expectancy = [];
   }
   mercCalc() {
-      const mercNum = .24;
-      const planetae = this;
-      planetae.earth / mercNum;
-      return planetae.mercury;
-    }
+    const mercNum = .24;
+    const world = this;
+    world.earth / mercNum;
+    return world.mercury;
+  }
 
-    venusCalc() {
-      const venNum = .62;
-      const planetae = this;
-      planetae.earth / venNum;
-      return planetae.venus;
-    }
+  venusCalc() {
+    const venNum = .62;
+    const world = this;
+    world.earth / venNum;
+    return world.venus;
+  }
 
-    marsCalc() {
-      const marsNum = 1.88;
-      const planetae = this;
-      planetae.earth / marsNum;
-      return planetae.mercury;
-    }
+  marsCalc() {
+    const marsNum = 1.88;
+    const world = this;
+    world.earth / marsNum;
+    return world.mercury;
+  }
 
-    jupCalc() {
-      const jupNum = 11.86;
-      const planetae = this;
-      planetae.earth / jupNum;
-      return planetae.jupiter;
-    }
+  jupCalc() {
+    const jupNum = 11.86;
+    const world = this;
+    world.earth / jupNum;
+    return world.jupiter;
+  }
 }
