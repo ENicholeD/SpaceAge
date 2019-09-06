@@ -1,3 +1,5 @@
+import { Age } from './../src/planets.js';
+
 describe('Age', function(){
 
   it('should test if the user age is being converted into planetary age', function(){

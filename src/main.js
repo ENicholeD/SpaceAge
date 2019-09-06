@@ -1,15 +1,14 @@
 import $ from 'jquery';
-import { Age } from './planets-logic.js';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import { Age } from './planets.js';
 
-$(document).ready(function(age){
+$(document).ready(function(){
   $('.form').submit(function(event){
-    event.preventDefault();
     let age = parseInt($('#earthAge').val());
+    event.preventDefault();
     const newUser = new Age(age);
-    console.log(newUser.mercCalc(age));
+    let result = newUser.mercCalc(age);
+
+    console.log(result);
     // let mercuryConvert = newUser.mercCalc();
     // $("#merc").text(mercuryConvert);
   });
