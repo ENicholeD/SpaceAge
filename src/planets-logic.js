@@ -8,7 +8,7 @@ export class UserAge{
     this.jupiter = jupiter;
     this.expectancy = [];
   }
-    mercCalc() {
+  mercCalc() {
       const mercNum = .24;
       const planetae = this;
       planetae.earth / mercNum;
