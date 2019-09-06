@@ -4,12 +4,13 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-$(document).ready(function(){
+$(document).ready(function(age){
   $('.form').submit(function(event){
     event.preventDefault();
     let age = parseInt($('#earthAge').val());
-    let newUser = new userAge(age);
-    let mercuryConvert = newUser.mercCalc();
-    $("#merc").text(mercuryConvert);
+    const newUser = new UserAge(age);
+    console.log(newUser.mercCalc(age));
+    // let mercuryConvert = newUser.mercCalc();
+    // $("#merc").text(mercuryConvert);
   });
 });
