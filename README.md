@@ -1,12 +1,12 @@
-# (project name)
+# planetAge
 
-(short discription)
+This program was made to showcase my understanding of the week 5 curriculum at Epicodus.
 
-#### By Erin Deuel on (date)
+#### By Erin Deuel on 09-6-2019
 
 ## Description
 
-
+This program is set up to take a users input and convert it into planetary years. This program is meant to showcase my understanding of webpacks.
 
 
 ## Specs
@@ -33,7 +33,13 @@
 
 ## Setup Instructions
 
-* type in (github page here) into your browser
+* type in https://github.com/MagpieMortician/SpaceAge into your browser
+* clone the repository onto your browser
+* use npm install in terminal
+* use npm run build in terminal
+* use npm start in terminal
+* type around in the page's console
+* use ctrl+c in terminal
 * close the webpage
 
 ## Known Bugs
@@ -48,7 +54,16 @@ Erin Deuel: end.gaia@gmail.com
 
 ## Technologies Used
 
-*
+* webpack
+* node.js
+* mac terminal
+* atom
+* chrome web browser
+* karma
+* jasmine
+* javascript
+* html
+* css
 
 ### License
 
