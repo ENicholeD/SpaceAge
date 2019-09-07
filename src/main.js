@@ -6,10 +6,13 @@ $(document).ready(function(){
     let age = parseInt($('#earthAge').val());
     event.preventDefault();
     const newUser = new Age(age);
-    let result = newUser.mercCalc(age);
-
-    console.log(result);
-    // let mercuryConvert = newUser.mercCalc();
-    // $("#merc").text(mercuryConvert);
+    newUser.mercCalc(age);
+    newUser.venusCalc(age);
+    newUser.marsCalc(age);
+    newUser.jupCalc(age);
+    console.log("mercury " + newUser.mercury);
+    console.log("venus " + newUser.venus);
+    console.log("mars " + newUser.mars);
+    console.log("jupiter " + newUser.jupiter);
   });
 });
