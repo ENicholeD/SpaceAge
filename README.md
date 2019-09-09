@@ -1,4 +1,4 @@
-# planetAge
+# SpaceAge
 
 This program was made to showcase my understanding of the week 5 curriculum at Epicodus.
 
