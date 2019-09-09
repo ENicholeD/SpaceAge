@@ -1,58 +1,105 @@
-export function Age(earth, gender, mercury, venus, mars, jupiter){
+export function Age(earth, sex, mercury, venus, mars, jupiter, mercExpect, venExpect, marsExpect, jupExpect, mercOver, venOver, marsOver, jupOver){
   this.earth = earth;
-  this.gender = gender;
   this.mercury = mercury;
   this.venus = venus;
   this.mars = mars;
   this.jupiter = jupiter;
+  this.sex = sex;
   this.female = 81;
   this.male = 76;
+  this.mercNum = .24;
+  this.venNum = .62;
+  this.marsNum = 1.88;
+  this.jupNum = 11.86;
+  this.mercExpect = mercExpect;
+  this.venExpect = venExpect;
+  this.marsExpect = marsExpect;
+  this.jupExpect = jupExpect;
+  this.mercOver = mercOver;
+  this.venOver = venOver;
+  this.marsOver = marsOver;
+  this.jupOver = jupOver;
 }
 Age.prototype.mercCalc = function() {
-  const mercNum = .24;
-  this.mercury = Math.round(this.earth / mercNum);
+  this.mercury = Math.round(this.earth / this.mercNum);
   return this.mercury;
 };
 
 Age.prototype.venusCalc = function() {
-  const venNum = .62;
-  this.venus = Math.round(this.earth / venNum);
+  this.venus = Math.round(this.earth / this.venNum);
   return this.venus;
 };
 
 Age.prototype.marsCalc = function() {
-  const marsNum = 1.88;
-  this.mars = Math.round(this.earth / marsNum);
+  this.mars = Math.round(this.earth / this.marsNum);
   return this.mercury;
 };
 
 Age.prototype.jupCalc = function() {
-  const jupNum = 11.86;
-  this.jupiter = Math.round(this.earth / jupNum);
+  this.jupiter = Math.round(this.earth / this.jupNum);
   return this.jupiter;
 };
-Age.prototype.lifeExpect = function() {
-  const mercNum = .24;
-  const venNum = .62;
-  const marsNum = 1.88;
-  const jupNum = 11.86;
-  if(this.gender === "female"){
-    let expectMerc = Math.round(this.female / mercNum);
-    let expectVen = Math.round(this.female / venNum);
-    let expectMar = Math.round(this.female / marsNum);
-    let expectjup = Math.round(this.female / jupNum);
-    this.allExpect = [expectMerc, expectVen, expectMar, expectjup];
-    console.log(this.allExpect);
+Age.prototype.mercuryExpect = function() {
+  if (this.sex === "male") {
+    this.mercExpect = Math.round(this.male / this.mercNum);
+    return this.mercExpect;
   }
-  if (this.gender === "male") {
-    let expectMerc = Math.round(this.male / mercNum);
-    let expectVen = Math.round(this.male / venNum);
-    let expectMar = Math.round(this.male / marsNum);
-    let expectjup = Math.round(this.male / jupNum);
-    let together = [expectMerc, expectVen, expectMar, expectjup];
-    this.allExpect = together;
-    console.log(this.allExpect);
-    return this.allExpect;
-
+  if(this.sex === "female"){
+    this.mercExpect = Math.round(this.female / this.mercNum);
+    return this.mercExpect;
+  }
+};
+Age.prototype.venusExpect = function(){
+  if (this.sex === "male") {
+    this.venExpect = Math.round(this.male / this.venNum);
+    return this.venExpect;
+  }
+  if(this.sex === "female"){
+    this.venExpect = Math.round(this.female / this.venNum);
+    return this.venExpect;
+  }
+};
+Age.prototype.marsExpectancy = function() {
+  if (this.sex === "male") {
+    this.marsExpect = Math.round(this.male / this.marsNum);
+    return this.marsExpect;
+  }
+  if(this.sex === "female"){
+    this.marsExpect = Math.round(this.female / this.marsNum);
+    return this.marsExpect;
+  }
+};
+Age.prototype.jupiterExpect = function () {
+  if (this.sex === "male") {
+    this.jupExpect = Math.round(this.male / this.jupNum);
+    return this.jupExpect;
+  }
+  if(this.sex === "female"){
+    this.jupExpect = Math.round(this.female / this.jupNum);
+    return this.jupExpect;
+  }
+};
+Age.prototype.over1 = function(){
+  if(this.mercury > this.mercExpect){
+    this.mercOver = this.mercury - this.mercExpect;
+    return this.mercOver;
+  }
+};
+Age.prototype.over2 = function(){
+  if(this.venus > this.venExpect){
+    this.venOver = this.venus - this.venExpect;
+    return this.venOver;
+  }
+};
+Age.prototype.over3 = function(){
+  if(this.mars > this.marsExpect){
+    this.marsOver = this.mars - this.marsExpect;
+    return this.marsOver;
+  }
+};
+Age.prototype.over4 = function(){
+  if(this.jupiter >= this.jupExpect){
+    this.jupOver = this.jupiter - this.jupExpect;
+    return this.jupOver;
   }
 };
