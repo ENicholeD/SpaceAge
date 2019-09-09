@@ -34,7 +34,7 @@ This program is set up to take a users input and convert it into planetary years
 ## Setup Instructions
 
 * type in https://github.com/MagpieMortician/SpaceAge into your browser
-* clone the repository onto your browser
+* clone the repository onto your desktop
 * use npm install in terminal
 * use npm run build in terminal
 * use npm start in terminal
