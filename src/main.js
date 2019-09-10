@@ -4,10 +4,15 @@ import './styles.css';
 
 $(document).ready(function(){
   $('.form').submit(function(event){
-    let age = parseInt($('#earthAge').val());
+
+    let age = parseInt($("#earthAge").val());
     let genderPick = $('input:radio[name=genderPick]:checked').val();
+
     event.preventDefault();
+
     const newUser = new Age(age, genderPick);
+    
+    console.log(age);
     newUser.mercCalc();
     newUser.venusCalc();
     newUser.marsCalc();
